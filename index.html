@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP'ZZA LT - Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .language-selector {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .language-selector span {
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .category {
+            padding: 20px;
+        }
+        .category h2 {
+            color: #ff6347;
+            border-bottom: 2px solid #ff6347;
+        }
+        .pizza {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .pizza h3 {
+            margin: 0 0 5px;
+        }
+        .pizza p {
+            margin: 0;
+            color: #555;
+        }
+        #contact-info {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        const translations = {
+            fr: {
+                available: "Disponible sur APP KOMIDA ou sur ce numéro WhatsApp : +33 6 66 08 89 16",
+                pizzettes: "Pizzettes",
+                empanazzas: "Empanazzas",
+                pizzas: "Pizzas",
+                sandwiches: "Sandwichs froids",
+            },
+            es: {
+                available: "Disponible en APP KOMIDA o en este número de WhatsApp: +33 6 66 08 89 16",
+                pizzettes: "Pizzetas",
+                empanazzas: "Empanadas",
+                pizzas: "Pizzas",
+                sandwiches: "Sándwiches fríos",
+            },
+            en: {
+                available: "Available on APP KOMIDA or WhatsApp: +33 6 66 08 89 16",
+                pizzettes: "Pizzettes",
+                empanazzas: "Empanazzas",
+                pizzas: "Pizzas",
+                sandwiches: "Cold Sandwiches",
+            },
+        };
+
+        function translate(lang) {
+            document.getElementById("contact-info").innerText = translations[lang].available;
+            document.querySelector(".pizzettes-title").innerText = translations[lang].pizzettes;
+            document.querySelector(".empanazzas-title").innerText = translations[lang].empanazzas;
+            document.querySelector(".pizzas-title").innerText = translations[lang].pizzas;
+            document.querySelector(".sandwiches-title").innerText = translations[lang].sandwiches;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>VIP'ZZA LT - Menu</h1>
+        <div class="language-selector">
+            <span onclick="translate('fr')">🇫🇷</span>
+            <span onclick="translate('es')">🇪🇸</span>
+            <span onclick="translate('en')">🇬🇧</span>
+        </div>
+    </header>
+
+    <div id="contact-info">
+        Disponible sur APP KOMIDA ou sur ce numéro WhatsApp : +33 6 66 08 89 16
+    </div>
+
+    <!-- Section Pizzettes -->
+    <div class="category">
+        <h2 class="pizzettes-title">Pizzettes</h2>
+        <div class="pizza"><h3>Tomate</h3><p>Tomate, mozzarella, basilic</p><p>200 RD$</p></div>
+        <div class="pizza"><h3>Classique</h3><p>Tomate, jambon, mozzarella, basilic</p><p>200 RD$</p></div>
+        <div class="pizza"><h3>Parisienne</h3><p>Tomate, jambon, champignons, mozzarella, basilic</p><p>200 RD$</p></div>
+        <div class="pizza"><h3>Chorizo</h3><p>Tomate, chorizo, mozzarella, basilic</p><p>200 RD$</p></div>
+        <div class="pizza"><h3>Knacki</h3><p>Tomate, knacki, mozzarella, basilic</p><p>200 RD$</p></div>
+        <div class="pizza"><h3>Dominicaine</h3><p>Tomate, knacki, maïs, poivrons, mozzarella, basilic</p><p>200 RD$</p></div>
+        <div class="pizza"><h3>Tocineta</h3><p>Tomate, tocineta, oignons caramélisés, mozzarella, ketchup</p><p>200 RD$</p></div>
+        <div class="pizza"><h3>Italienne</h3><p>Tomate, mortadelle, éclats de pistache, mozzarella, basilic</p><p>250 RD$</p></div>
+    </div>
+
+    <!-- Section Empanazzas -->
+    <div class="category">
+        <h2 class="empanazzas-title">Empanazzas</h2>
+        <div class="pizza"><h3>Classic</h3><p>Tomate, jambon, mozzarella, origan</p><p>250 RD$</p></div>
+        <div class="pizza"><h3>Parisien</h3><p>Tomate, jambon, champignons, origan</p><p>250 RD$</p></div>
+        <div class="pizza"><h3>3 Fromages</h3><p>Mozzarella, bleu creole, chèvre</p><p>250 RD$</p></div>
+        <div class="pizza"><h3>Chorizo</h3><p>Tomate, chorizo, mozzarella, origan</p><p>250 RD$</p></div>
+        <div class="pizza"><h3>Sevillan</h3><p>Tomate, mozzarella, chorizo, oignons caramélisés, poivron grillé, origan</p><p>300 RD$</p></div>
+        <div class="pizza"><h3>Royal</h3><p>Tomate, mozzarella, jambon, champignons, oignons caramélisés, œuf, origan</p><p>300 RD$</p></div>
+        <div class="pizza"><h3>Bolo</h3><p>Tomate, mozzarella, viande hachée, oignons caramélisés, œuf, origan</p><p>300 RD$</p></div>
+        <div class="pizza"><h3>VIP</h3><p>Tomate, mozzarella, lardons fumés, oignons caramélisés, œuf, origan</p><p>300 RD$</p></div>
+        <div class="pizza"><h3>Burger</h3><p>Tomate, mozzarella, viande hachée, oignons caramélisés, sauce boa, origan</p><p>300 RD$</p></div>
+        <div class="pizza"><h3>Soleil</h3><p>Pesto, mozzarella, jambon cru, mortadelle, éclats de pistaches, origan</p><p>300 RD$</p></div>
+        <div class="pizza"><h3>Fermier</h3><p>Crème fraîche, mozzarella, jambon cru, chèvre, origan</p><p>300 RD$</p></div>
+        <div class="pizza"><h3>Flammé</h3><p>Crème fraîche, mozzarella, lardons fumés, oignons caramélisés, origan</p><p>300 RD$</p></div>
+        <div class="pizza"><h3>Carbo</h3><p>Crème fraîche, mozzarella, lardons fumés, champignons, œuf, origan</p><p>300 RD$</p></div>
+        <div class="pizza"><h3>Knacki</h3><p>Tomate, saucisse knacki, tomates, mozzarella, salade verte, basilic</p><p>250 RD$</p></div>
+        <div class="pizza"><h3>Tocineta</h3><p>Tomate, tocineta, œuf, mozzarella, ketchup, salade verte, basilic</p><p>300 RD$</p></div>
+        <div class="pizza"><h3>Special</h3><p>4 ingrédients au choix</p><p>350 RD$</p></div>
+    </div>
+
+    <!-- Section Pizzas -->
+    <div class="category">
+        <h2 class="pizzas-title">Pizzas</h2>
+        <div class="pizza"><h3>Classique</h3><p>Tomate, jambon, fromage, olives, origan</p><p>450 RD$</p></div>
+        <div class="pizza"><h3>Mozzarella</h3><p>Tomate, mozzarella, olives, origan</p><p>450 RD$</p></div>
+        <div class="pizza"><h3>Parisienne</h3><p>Tomate, jambon, champignons, fromage, olives, origan</p><p>500 RD$</p></div>
+        <div class="pizza"><h3>Forestière</h3><p>Tomate, champignons, fromage, olives, origan</p><p>450 RD$</p></div>
+        <div class="pizza"><h3>Chorizo</h3><p>Tomate, chorizo, fromage, olives, origan</p><p>500 RD$</p></div>
+        <div class="pizza"><h3>Sevillanne</h3><p>Tomate, oignons caramélisés, chorizo, poivrons poêlés, fromage, olives, origan</p><p>600 RD$</p></div>
+        <div class="pizza"><h3>Royale</h3><p>Tomate, jambon, champignons, oignons caramélisés, œuf, fromage, olives, origan</p><p>600 RD$</p></div>
+        <div class="pizza"><h3>Bolognaise</h3><p>Tomate, viande hachée, oignons caramélisés, œuf, fromage, olives, origan</p><p>600 RD$</p></div>
+        <div class="pizza"><h3>VIP</h3><p>Tomate, lardons fumés, oignons caramélisés, œuf, fromage, olives, origan</p><p>600 RD$</p></div>
+        <div class="pizza"><h3>Burger</h3><p>Tomate, viande hachée, oignons caramélisés, œuf, sauce bba, fromage, olives, origan</p><p>600 RD$</p></div>
+        <div class="pizza"><h3>Savoyarde</h3><p>Crème fraîche, jambon cru, oignons caramélisés, chèvre, fromage, olives, origan</p><p>600 RD$</p></div>
+        <div class="pizza"><h3>Fermière</h3><p>Crème fraîche, jambon cru, chèvre, mozza, olives, origan</p><p>600 RD$</p></div>
+        <div class="pizza"><h3>Flamme</h3><p>Crème fraîche, lardons fumés, oignons caramélisés, fromage, olives, origan</p><p>600 RD$</p></div>
+        <div class="pizza"><h3>Carbo</h3><p>Crème fraîche, lardon fumé, champignons, œuf, fromage, olives, origan</p><p>600 RD$</p></div>
+        <div class="pizza"><h3>Soleil</h3><p>Tomate, jambon cru, mortadelle, mozzarella, éclats de pistache, pesto, basilic</p><p>650 RD$</p></div>
+        <div class="pizza"><h3>Antillaise</h3><p>Poulet, lait coco, curry, ananas, oignons caramélisés, fromage</p><p>600 RD$</p></div>
+        <div class="pizza"><h3>Spéciale</h3><p>4 ingrédients au choix</p><p>650 RD$</p></div>
+        <div class="pizza"><h3>Crevette</h3><p>Crevettes, lait coco, curry, ail, fromage</p><p>600 RD$</p></div>
+        <div class="pizza"><h3>Dominicaine</h3><p>Tomate, knacki, maïs, poivrons, mozzarella, basilic</p><p>600 RD$</p></div>
+        <div class="pizza"><h3>3 fromages</h3><p>Crème fraîche, chèvre, bleu creole, mozzarella, origan</p><p>600 RD$</p></div>
+    </div>
+
+    <!-- Section Sandwichs Froids -->
+    <div class="category">
+        <h2 class="sandwiches-title">Sandwichs froids</h2>
+        <div class="pizza"><h3>Jambon</h3><p>Jambon, mozzarella, tomate, salade verte, basilic, sauce blanche</p><p>250 RD$</p></div>
+        <div class="pizza"><h3>Jambon cru</h3><p>Jambon cru, mozzarella, tomates, salade verte, basilic, sauce blanche</p><p>250 RD$</p></div>
+        <div class="pizza"><h3>Mortadelle</h3><p>Mortadelle, mozzarella, tomates, salade verte, basilic, sauce blanche</p><p>250 RD$</p></div>
+        <div class="pizza"><h3>Italien</h3><p>Pesto, mortadelle, mozzarella, tomates, salade verte, basilic, sauce blanche</p><p>250 RD$</p></div>
+        <div class="pizza"><h3>Petit Paris</h3><p>Jambon beurre, salade verte, fromage</p><p>250 RD$</p></div>
+        <div class="pizza"><h3>Soleil</h3><p>Pesto, jambon cru, mortadelle, salade verte, éclats de pistache, basilic, sauce blanche</p><p>300 RD$</p></div>
+        <div class="pizza"><h3>Mozza</h3><p>Mozzarella, tomates, roquette, basilic</p><p>250 RD$</p></div>
+        <div class="pizza"><h3>Tocineta</h3><p>Tomates, mozzarella, salade verte, tocineta grillée, basilic</p><p>250 RD$</p></div>
+        <div class="pizza"><h3>Knacki</h3><p>Tomate, mozzarella, knacki grillée, salade verte, basilic</p><p>250 RD$</p></div>
+        <div class="pizza"><h3>Poulet</h3><p>Blanc de poulet, tocineta grillée, tomates, salade, sauce blanche</p><p>250 RD$</p></div>
+        
+        </div> 
+  
+</body>
+</html>
